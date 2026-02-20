@@ -5,6 +5,7 @@ public enum Season {
     WINTER("ЗИМА");
 
     private String nameRy;
+
     Season(String nameRy) {
         this.nameRy = nameRy;
     }
