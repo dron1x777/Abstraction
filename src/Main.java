@@ -1,12 +1,15 @@
-import com.sun.net.httpserver.HttpServer;
-
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        HttpStatus.getInfo(HttpStatus.BAD_REQUEST);
-        System.out.println(HttpStatus.NOT_FOUND.getNameRy());
-        System.out.println(HttpStatus.fromCode(200));
+        System.out.print("enter a: ");
+        int a = sc.nextInt();
+        System.out.print("enter b: ");
+        int b = sc.nextInt();
+
+        for (Operation operation:Operation.values()) {
+            System.out.println(operation.apply(a, b));
+        }
     }
 }
