@@ -3,13 +3,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("enter a: ");
-        int a = sc.nextInt();
-        System.out.print("enter b: ");
-        int b = sc.nextInt();
-
-        for (Operation operation:Operation.values()) {
-            System.out.println(operation.apply(a, b));
+        System.out.println("work days: ");
+        for (Week week: Week.values()) {
+            if(!week.isWeekend()){
+                System.out.println(week);
+                System.out.println("-----------------------------------");
+            }
+        }
+        System.out.println("rest days: ");
+        for(Week week: Week.values()){
+            if(week.isWeekend()){
+                System.out.println(week);
+                System.out.println("--------------------------------");
+            }
         }
     }
 }
